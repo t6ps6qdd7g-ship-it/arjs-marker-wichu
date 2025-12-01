@@ -1,0 +1,40 @@
+‹ ! doctype html>
+<html lang="ja">
+< head›
+‹ meta charset="utf-8" />
+‹meta name="viewport" content="width=device-width, initial-scale=1
+"'/>
+<title>AR.js Marker Example‹/title>
+‹! -- A-Frame 1(A-->
+‹script src="https://aframe.io/releases/1.5.0/aframe.min.js"></scr
+ipt>
+‹!-- AR.js for A-Frame (CDN) -->
+«script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/bu
+ild/aframe-ar.min.js"></script>
+‹style>
+body, html { margin:0; padding:0; overflow:hidden;
+.hint { position: fixed; left: 50%; transform: translateX(-50%);
+bottom: 12px; background: rgba(0,0,0,.6); color: #fff; padding: 6px 1
+Opx; border-radius: 8px; font-size: 14px; }
+‹/style>
+</head>
+‹ body>
+<！-- arjs="sourceType： webcam；"で端末カメラを使用-－＞
+<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;
+">
+<！-- 既成のHIROマーカーを使う例－>
+<a-marker preset="hiro" ›
+＜！-- 原点に簡単な立方体を表示-－＞
+‹a-box position="0 0.5 0" depth="1" height="1" width="1" color
+="#4CC3D9"></a-box>
+<a-sphere position="1 1 0" radius="0.5" color="#EF2D5E"></a-sp
+here>
+‹a-text value="Hello AR.js" position="-0.8 1.8 0" color="#fff"
+>/a-text>
+</a-marker>
+<！--カメラ -->
+‹a-entity camera>‹/a-entity>
+</a-scene>
+<div class="hint">マーカー（HIRO）をかざしてみてくださいく/div＞
+</body>
+</html>
